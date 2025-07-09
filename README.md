@@ -20,7 +20,7 @@ This tool supports IT teams in reducing post-deployment errors and speeds up end
 
 ## 🏠 Home SOC Lab (AWS + Splunk)
 
-🔗 [View Repository](https://github.com/yourusername/Home-SOC-Lab)
+🔗 [View Repository](https://github.com/DigitalBulwark-z8586/HomeLab-SOC)
 
 A simulated cloud-based SOC environment built using:
 - **Splunk Enterprise** for SIEM and alerting
