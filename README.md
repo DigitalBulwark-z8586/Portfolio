@@ -34,7 +34,7 @@ This lab demonstrates Tier 1 SOC analyst workflows, detection engineering, and i
 
 ## 📡 Python Network Packet Analyzer
 
-🔗 [View Repository](https://github.com/yourusername/Python-Traffic-Analyzer)
+🔗 [View Repository](https://github.com/DigitalBulwark-z8586/Packet_Analyzer)
 
 A Python script that performs:
 - Live or offline **packet analysis**
