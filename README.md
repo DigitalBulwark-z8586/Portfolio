@@ -8,7 +8,7 @@ I hold a **BBA in Computer Information Systems** with a concentration in **Infor
 
 ## 🖥️ Post-Reimaging Automation Script (PowerShell)
 
-🔗 [View Repository](https://github.com/yourusername/Post-Imaging-Script)
+🔗 [View Repository](https://github.com/DigitalBulwark-z8586/Post_Imaging_Validation)
 
 A PowerShell script that automates essential post-imaging checks for newly deployed Windows systems. It collects:
 - Computer manufacturer and hostname
