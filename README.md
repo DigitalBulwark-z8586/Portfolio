@@ -23,7 +23,7 @@ Texas A&M University–San Antonio
 - CompTIA Security+
 - CompTIA CySA+ (CSAP Stack)
 - Microsoft SC-300 (in progress)
-- Secret Security Clearance (Active)
+- Security Clearance (Active)
 
 ---
 
