@@ -1,91 +1,132 @@
-# 👋 Hey there, I’m Zachary Hanselman
+# 🚀 Zachary Hanselman's Cybersecurity & Automation Portfolio
 
-**DigitalBulwark-z8586 | Software & Cybersecurity Engineer**
+Welcome to my cybersecurity, automation, and homelab engineering portfolio.  
+I specialize in **SOC operations, detection engineering, Windows security monitoring, PowerShell automation, cloud security, and DoD-aligned cyber practices.**
 
-Welcome to my GitHub portfolio — a space where software development meets cybersecurity engineering.  
-I specialize in building secure, scalable applications and automation tools that bridge the gap between system administration, cloud infrastructure, and cyber defense.
-
----
-
-## 🧭 About Me
-
-🎓 **Background:**  
-B.B.A. in Computer Information Systems — Information Security & Assurance  
-Texas A&M University–San Antonio
-
-🔐 **Current Focus Areas:**
-- Secure App & Software Development (Python, FastAPI, React, Docker)
-- Cloud Security Engineering (Azure | AWS | Hybrid Environments)
-- Cyber Defense Automation (SIEM, Log Analysis, Vulnerability Management)
-- Identity & Access Management (SC-300 in progress)
-
-🧠 **Certifications:**
-- CompTIA Security+
-- CompTIA CySA+ (CSAP Stack)
-- Microsoft SC-300 (in progress)
-- Security Clearance (Active)
+This portfolio contains hands-on projects designed to demonstrate the technical skills I use daily as a **Cybersecurity Engineer** supporting the Defense Health Agency (DHA), as well as the blue-team and automation capabilities I continue to refine through my home SOC lab.
 
 ---
 
-## ⚙️ Technical Stack
+# 🛡️ Featured Project: EventLog_Triage1  
+**Windows Security Event Log Triage Tool (PowerShell)**  
+📂 Repo: https://github.com/DigitalBulwark-z8586/EventLog_Triage1
 
-**Languages:**  
-`Python` · `JavaScript` · `PowerShell` · `Bash` · `SQL`
+A PowerShell-based tool that automates triage of Windows Security event logs for Tier 1 SOC workflows.  
+It collects critical authentication, account activity, and process creation events — parses XML event data, extracts actionable security fields, sorts events by relevance, and exports results for analyst review or SIEM ingestion.
 
-**Frameworks & Tools:**  
-`FastAPI` · `Flask` · `React` · `Docker` · `LangChain` · `Splunk` · `Elastic Stack` · `ACAS` · `Azure` · `AWS`
-
-**DevOps & Automation:**  
-`GitHub Actions` · `CI/CD` · `Ansible` · `Terraform` · `Containerization` · `API Integration`
-
-**Cybersecurity Tools:**  
-`Splunk Enterprise` · `Wazuh` · `Trellix` · `STIG Viewer` · `ACAS/Nessus` · `Wireshark` · `Sysmon` · `MITRE ATT&CK`
-
----
-
-## 🚀 Featured Projects
-
-### 🧠 [LangChain Demo App](https://github.com/DigitalBulwark-z8586/langchainDemo)
-*Intelligent Agent Development with Python 3.12 + LangChain 1.x*
-
-- Built modular AI agents using LangChain Core and LangGraph.
-- Integrated OpenAI and local Ollama models for testing prompt pipelines.
-- Demonstrates composability, tool integration, and event streaming.
-
-### 🧩 [Home SOC Lab](https://github.com/DigitalBulwark-z8586/Home-SOC-Lab)
-*Hybrid Security Operations Lab — Cloud + On-Prem Integration*
-
-- Configured Windows Server 2022 AD DC and AWS EC2 SIEM with Splunk.
-- Integrated Sysmon, Winlogbeat, and Linux UF for centralized log collection.
-- Built custom Splunk dashboards and detection rules aligned with MITRE ATT&CK.
-
-### ⚡ [Automation Toolkit](https://github.com/DigitalBulwark-z8586/Automation-Toolkit)
-*PowerShell and Python utilities for enterprise system validation.*
-
-- Automates post-imaging verification and security patch compliance.
-- Validates AD permissions, PKI tokens, and network configuration baselines.
+### 🔍 Key Features
+- Pulls Tier-1 SOC Security events: 4624, 4625, 4688, 4720–4726, 4768–4776, etc.
+- Parses XML event data to extract:
+  - Target/Subject User  
+  - Domain  
+  - IP Address and Port  
+  - Logon Type  
+  - Workstation  
+  - Authentication Package  
+  - Process Executed  
+  - Status & SubStatus  
+  - ✔ FailureReason for 4625 (Failed Logon)
+- Groups & sorts events by **EventId + TimeCreated**
+- Supports **CSV export** for SIEM, Excel, or forensic review
+- Ideal for:
+  - SOC Analyst training  
+  - IR triage  
+  - Home SOC lab data ingestion  
+  - Account misuse investigation  
+  - Authentication failure pattern analysis
 
 ---
 
-## 🌐 Connect With Me
+# 📚 Additional Portfolio Projects
 
-💼 **LinkedIn:** [linkedin.com/in/zacharyhanselman](https://linkedin.com/in/zacharyhanselman)  
-🧰 **GitHub Projects:** [github.com/DigitalBulwark-z8586](https://github.com/DigitalBulwark-z8586)  
-📧 **Email:** zach.hanselman@outlook.com  
+## 🔹 Home SOC Lab (Hybrid Cloud + On-Prem)
+A multi-cloud SOC architecture integrating AWS, on-prem Windows Server 2022 AD, Linux endpoints, Splunk Enterprise, Wazuh, and Elastic Stack.
 
----
-
-## 🧩 Current Learning Path
-- Deepening expertise in **Cloud IAM & Security Operations**
-- Expanding **AppSec and DevSecOps** portfolio
-- Preparing for **CISSP** and **Azure Security Engineer (AZ-500)**
-
----
-
-### 🛡️ Motto
-> “Security by Design — Development with Purpose.”
+**Highlights**  
+- Windows log forwarding with Splunk UF  
+- Linux auditd + syslog forwarding  
+- Malware simulation & detection testing  
+- Network segmentation, VLANs, and firewall rules  
+- MITRE ATT&CK mapping for custom detections  
+- Cloud-hosted identity (Hybrid AD) investigations
 
 ---
 
-### 🧾 License
-All code and documentation in this portfolio are released under the **MIT License** unless otherwise stated.
+## 🔹 Python Security Tools & Scripts
+**Suspicious Process Snapshot Script**
+- Process → network connection mapping  
+- Flags suspicious command-line arguments  
+- Detects execution from user temp/download folders  
+- CSV + JSON output for IR triage
+
+**Network Traffic Analyzer**
+- Live packet capture  
+- DNS & ICMP logging  
+- GeoIP enrichment  
+- Syslog export to SIEM stack
+
+---
+
+## 🔹 PowerShell Security & Automation
+- Windows Event Log automation  
+- Automated ACAS/Vulnerability compliance checks  
+- Endpoint baseline compliance scripts  
+- User provisioning & AD lifecycle automation  
+- PKI Token auditing and privileged access reviews
+
+---
+
+# 💼 Professional Background
+
+**Cybersecurity Engineer – Ka’ala Systems / DHA  
+Security Clearance: Secret (Active)**
+
+Key responsibilities:
+- Privileged access management (PAM/PAA)  
+- PKI token issuance & alternate token operations  
+- ACAS/STIG vulnerability and compliance remediation  
+- Incident response support (DLP, account misuse, access anomalies)  
+- DoD 8570 / 8140–aligned security engineering tasks  
+- RMF, audit evidence capture, and control validation
+
+---
+
+# 🧰 Skills & Technologies
+
+### **Security**
+- SIEM (Splunk, Elastic, Wazuh)  
+- Windows Security / Kerberos / NTLM  
+- Incident Response & Triage  
+- Vulnerability Management (ACAS/Tenable)  
+- STIG compliance / RMF  
+- Identity & Access Management (IAM)
+
+### **Tools & Languages**
+- PowerShell  
+- Python  
+- Bash  
+- Wireshark  
+- Nmap  
+- Sysmon  
+- Git/GitHub  
+- AWS / Azure (Foundational Security)
+
+---
+
+# 🎯 Current Goals
+- Microsoft **AZ-500** (in progress)  
+- Expand SOC automation scripts (Python + PowerShell)  
+- Build and publish additional detection engineering lab content  
+- Prepare for long-term achievement of **CISSP**  
+
+---
+
+# 📫 Contact  
+If you're a recruiter, SOC manager, or security leader and would like to connect:
+
+**LinkedIn:** https://www.linkedin.com/in/zachary-hanselman/  
+**GitHub:** https://github.com/DigitalBulwark-z8586
+
+---
+
+Thank you for viewing my portfolio!
