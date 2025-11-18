@@ -1,202 +1,101 @@
-# 🚀 Zachary Hanselman's Cybersecurity & Automation Portfolio
+# Zachary Hanselman – Portfolio  
+**Cybersecurity | SOC Analyst | Blue Team Automation**
 
-Welcome to my cybersecurity, automation, and homelab engineering portfolio.  
-I specialize in **SOC operations, detection engineering, Windows security monitoring, PowerShell automation, cloud security, and DoD-aligned cyber practices.**
-
-This portfolio contains hands-on projects designed to demonstrate the technical skills I use daily as a **Cybersecurity Engineer** supporting the Defense Health Agency (DHA), as well as the blue-team and automation capabilities I continue to refine through my home SOC lab.
-
----
-
-## 🛡️ Suspicious Process Snapshot (PowerShell)
-**Windows Endpoint Triage Tool | SOC & Incident Response | PowerShell Automation**
-
-
-This project is a PowerShell-based triage utility designed to provide quick situational awareness during SOC investigations and Incident Response. The script performs a real-time snapshot of running processes, parent-child relationships, command-line arguments, and optional network connections — all essential data points for quickly validating suspicious activity on a Windows host.
-
-Repo: https://github.com/DigitalBulwark-z8586/Suspicious_Process
+Welcome to my personal portfolio showcasing projects I’ve built to support security operations, incident response, and home-lab automation.  
+With a background in business process analysis and risk management, and an active Secret clearance, I’m transitioning into SOC/Network Security with hands-on tooling, scripting, and threat-detection artifacts.
 
 ---
 
-### 🎯 Objective
-Modern SOC environments frequently deal with:
-- AV alerts  
-- Suspicious user activity  
-- Potential malware execution  
-- Irregular PowerShell/CMD behavior  
-- Unknown outbound connections  
-
-Tier 1 analysts must rapidly answer questions such as:
-- *Is PowerShell running encoded commands?*  
-- *Is something executing from Temp or Downloads?*  
-- *Is a process unexpectedly making network connections?*  
-
-This tool streamlines those checks without requiring an EDR platform, making it ideal for home labs, real-world SOC work, and blue-team training.
+## 📋 Table of Contents  
+1. [Suspicious Process Snapshot (PowerShell)](#1-suspicious-process-snapshot-powershell)  
+2. [Home SOC Lab – Hybrid AD + SIEM Architecture](#2-home-soc-lab–hybrid-ad-+-siem-architecture)  
+3. [Network Traffic Analyzer – Python Script](#3-network-traffic-analyzer–python-script)  
+4. [Professional Background & Skills](#4-professional-background-&-skills)  
+5. [Contact & LinkedIn](#5-contact-&-linkedin)
 
 ---
 
-### 🔧 Key Features
-- **Process Enumeration**
-  - Process name, PID, Parent PID
-  - Full command line
-  - Executable path
-  - Timestamp of capture
+## 1️⃣ Suspicious Process Snapshot (PowerShell)  
+**Windows Endpoint Triage Tool | SOC & Incident Response | PowerShell Automation**  
+Developed a PowerShell-based triage utility designed to provide rapid situational awareness during SOC investigations. The script captures running processes, parent-child relationships, command-lines, and optional network connections — including built-in heuristics to flag suspicious behavior.
 
-- **Network Connection Mapping** *(optional)*
-  - Per-process remote IP:Port
-  - Flags outbound activity
+### ▶️ Key Features  
+- Enumerates processes (Name, PID, ParentPID, Path, CmdLine)  
+- Optional network connection mapping per process (IP:Port)  
+- Flags suspicious activity like:
+  - PowerShell/CMD using encoded or web-download commands  
+  - Execution from Temp/Downloads or user cache folders  
+  - Shell processes making outbound connections  
+  - Missing executable path anomalies  
+- Outputs include `IsSuspicious` + `SuspiciousReason`  
+- Export to CSV or JSON for investigation/documentation  
 
-- **Suspicion-Based Heuristics**
-  - PowerShell/CMD using encoded or web-download commands
-  - Execution from user Temp, Downloads, or cache locations
-  - Shell processes establishing outbound connections
-  - Missing executable paths (non-system binaries)
+### 💼 Use Cases  
+Ideal for:
+- Tier 1 triage of AV/EDR alerts  
+- Endpoint investigations during incident response  
+- Home-lab blue-team practice  
+- Rapid host state capture before isolation  
 
-- **Analyst-Friendly Outputs**
-  - `IsSuspicious` flag
-  - `SuspiciousReason` explanation
-  - Export results to:
-    - CSV (case documentation, Excel review)
-    - JSON (automation/SIEM ingestion)
+### 🛠 Skills Leveraged  
+PowerShell • Incident Response • Process & Network Triage • Threat Detection • Windows Internals • Automation  
 
----
-
-### 📦 Use Cases (SOC / IR Focus)
-- Triage suspicious login or behavior alerts  
-- Validate potential malware execution paths  
-- Investigate PowerShell misuse / encoded commands  
-- Rapid pre-isolation host review  
-- Forensics-style host state capture  
-- Home SOC lab simulations and training  
+### 🔗 Repository  
+[GitHub – Suspicious_Process](https://github.com/DigitalBulwark-z8586/Suspicious_Process)
 
 ---
 
-### 🚀 Example Usage
+## 2️⃣ Home SOC Lab – Hybrid AD + SIEM Architecture  
+**Hybrid Infrastructure • AWS EC2 • Windows Server 2022 • SIEM Integration**  
+Built a home SOC lab combining on-premise infrastructure with cloud-based elements to simulate a realistic enterprise environment. Features include:
 
-**Basic Run:**
-```powershell
-.\Get-SuspiciousProcessSnapshot.ps1 -IncludeNetConnections -ShowOnlySuspicious `
-    -OutputCsv "C:\Logs\ProcessSnapshot.csv"
+- A Windows Server 2022 Domain Controller on-prem  
+- A cloud-hosted Domain Controller in AWS EC2  
+- Integration with Splunk Enterprise for real-time log ingestion and security monitoring  
+- Network traffic analyzer, Sysmon, and syslog forwarding  
+- Visibility into DNS/ICMP, geolocation lookup, and live threat detection  
 
-# 🛡️ Featured Project: EventLog_Triage1  
-**Windows Security Event Log Triage Tool (PowerShell)**  
-📂 Repo: https://github.com/DigitalBulwark-z8586/EventLog_Triage1
-
-A PowerShell-based tool that automates triage of Windows Security event logs for Tier 1 SOC workflows.  
-It collects critical authentication, account activity, and process creation events — parses XML event data, extracts actionable security fields, sorts events by relevance, and exports results for analyst review or SIEM ingestion.
-
-### 🔍 Key Features
-- Pulls Tier-1 SOC Security events: 4624, 4625, 4688, 4720–4726, 4768–4776, etc.
-- Parses XML event data to extract:
-  - Target/Subject User  
-  - Domain  
-  - IP Address and Port  
-  - Logon Type  
-  - Workstation  
-  - Authentication Package  
-  - Process Executed  
-  - Status & SubStatus  
-  - ✔ FailureReason for 4625 (Failed Logon)
-- Groups & sorts events by **EventId + TimeCreated**
-- Supports **CSV export** for SIEM, Excel, or forensic review
-- Ideal for:
-  - SOC Analyst training  
-  - IR triage  
-  - Home SOC lab data ingestion  
-  - Account misuse investigation  
-  - Authentication failure pattern analysis
+Prepared as a showcase for SOC Tier 1 Analyst roles and portfolio review.  
+(*Details and scripts available in the lab’s GitHub section.*)
 
 ---
 
-# 📚 Additional Portfolio Projects
+## 3️⃣ Network Traffic Analyzer – Python Script  
+**Python • Pcap Parsing • DNS/ICMP Monitoring • GeoIP Lookup**  
+Developed a Python tool to capture and analyze network traffic in a home lab environment. Key capabilities:
 
-## 🔹 Home SOC Lab (Hybrid Cloud + On-Prem)
-A multi-cloud SOC architecture integrating AWS, on-prem Windows Server 2022 AD, Linux endpoints, Splunk Enterprise, Wazuh, and Elastic Stack.
+- Captures live network traffic (pcap) and parses DNS/ICMP flows  
+- Logs output in JSON/CSV for ingest into SIEM (Splunk)  
+- Includes GeoIP lookup to convert IP addresses into geographic locations  
+- Configured for seamless integration with the home SOC lab stack  
 
-**Highlights**  
-- Windows log forwarding with Splunk UF  
-- Linux auditd + syslog forwarding  
-- Malware simulation & detection testing  
-- Network segmentation, VLANs, and firewall rules  
-- MITRE ATT&CK mapping for custom detections  
-- Cloud-hosted identity (Hybrid AD) investigations
+Supports elevated learning in network-based detection and monitoring — core for SOC Tier 1 / Tier 2 roles.
 
 ---
 
-## 🔹 Python Security Tools & Scripts
-**Suspicious Process Snapshot Script**
-- Process → network connection mapping  
-- Flags suspicious command-line arguments  
-- Detects execution from user temp/download folders  
-- CSV + JSON output for IR triage
+## 4️⃣ Professional Background & Skills  
+**Experience Highlights:**  
+- Tier II Help Desk Support Specialist at Ka'ala Systems (U.S. Air Force contract) – network accounts, print-server troubleshooting, Trusted Agent Security Manager  
+- Risk Management Analyst at USAA – enterprise risk workflows  
+- Business Process Analyst at Wells Fargo – process redesign & automation  
 
-**Network Traffic Analyzer**
-- Live packet capture  
-- DNS & ICMP logging  
-- GeoIP enrichment  
-- Syslog export to SIEM stack
+**Certifications & Education:**  
+- CompTIA Security+ (active)  
+- Working toward: CCNA, CySA+ (Objective 1.2 in progress)  
+- BBA Computer Information Systems – Information Security & Assurance (Texas A&M University San Antonio)  
 
----
-
-## 🔹 PowerShell Security & Automation
-- Windows Event Log automation  
-- Automated ACAS/Vulnerability compliance checks  
-- Endpoint baseline compliance scripts  
-- User provisioning & AD lifecycle automation  
-- PKI Token auditing and privileged access reviews
+**Core Technical Skills:**  
+- PowerShell, Python, Splunk, AWS EC2, Windows Server 2022  
+- SIEM log ingestion, network traffic analysis, process monitoring  
+- Threat detection, incident response, SOC analyst tooling  
 
 ---
 
-# 💼 Professional Background
+## 5️⃣ Contact & LinkedIn  
+📧 Email – [your email]  
+🔗 LinkedIn – [Your LinkedIn Profile]  
 
-**Cybersecurity Engineer – Ka’ala Systems / DHA  
-Security Clearance: Secret (Active)**
-
-Key responsibilities:
-- Privileged access management (PAM/PAA)  
-- PKI token issuance & alternate token operations  
-- ACAS/STIG vulnerability and compliance remediation  
-- Incident response support (DLP, account misuse, access anomalies)  
-- DoD 8570 / 8140–aligned security engineering tasks  
-- RMF, audit evidence capture, and control validation
+Thank you for reviewing my portfolio. I’m actively seeking SOC/Network Security roles and eager to bring automation and blue-team skills to a dynamic team.  
 
 ---
 
-# 🧰 Skills & Technologies
-
-### **Security**
-- SIEM (Splunk, Elastic, Wazuh)  
-- Windows Security / Kerberos / NTLM  
-- Incident Response & Triage  
-- Vulnerability Management (ACAS/Tenable)  
-- STIG compliance / RMF  
-- Identity & Access Management (IAM)
-
-### **Tools & Languages**
-- PowerShell  
-- Python  
-- Bash  
-- Wireshark  
-- Nmap  
-- Sysmon  
-- Git/GitHub  
-- AWS / Azure (Foundational Security)
-
----
-
-# 🎯 Current Goals
-- Microsoft **AZ-500** (in progress)  
-- Expand SOC automation scripts (Python + PowerShell)  
-- Build and publish additional detection engineering lab content  
-- Prepare for long-term achievement of **CISSP**  
-
----
-
-# 📫 Contact  
-If you're a recruiter, SOC manager, or security leader and would like to connect:
-
-**LinkedIn:** https://www.linkedin.com/in/zachary-hanselman/  
-**GitHub:** https://github.com/DigitalBulwark-z8586
-
----
-
-Thank you for viewing my portfolio!
