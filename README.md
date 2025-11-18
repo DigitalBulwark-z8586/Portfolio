@@ -7,6 +7,74 @@ This portfolio contains hands-on projects designed to demonstrate the technical 
 
 ---
 
+## 🛡️ Suspicious Process Snapshot (PowerShell)
+**Windows Endpoint Triage Tool | SOC & Incident Response | PowerShell Automation**
+Repo: https://github.com/DigitalBulwark-z8586/Suspicious_Process
+
+This project is a PowerShell-based triage utility designed to provide quick situational awareness during SOC investigations and Incident Response. The script performs a real-time snapshot of running processes, parent-child relationships, command-line arguments, and optional network connections — all essential data points for quickly validating suspicious activity on a Windows host.
+
+---
+
+### 🎯 Objective
+Modern SOC environments frequently deal with:
+- AV alerts  
+- Suspicious user activity  
+- Potential malware execution  
+- Irregular PowerShell/CMD behavior  
+- Unknown outbound connections  
+
+Tier 1 analysts must rapidly answer questions such as:
+- *Is PowerShell running encoded commands?*  
+- *Is something executing from Temp or Downloads?*  
+- *Is a process unexpectedly making network connections?*  
+
+This tool streamlines those checks without requiring an EDR platform, making it ideal for home labs, real-world SOC work, and blue-team training.
+
+---
+
+### 🔧 Key Features
+- **Process Enumeration**
+  - Process name, PID, Parent PID
+  - Full command line
+  - Executable path
+  - Timestamp of capture
+
+- **Network Connection Mapping** *(optional)*
+  - Per-process remote IP:Port
+  - Flags outbound activity
+
+- **Suspicion-Based Heuristics**
+  - PowerShell/CMD using encoded or web-download commands
+  - Execution from user Temp, Downloads, or cache locations
+  - Shell processes establishing outbound connections
+  - Missing executable paths (non-system binaries)
+
+- **Analyst-Friendly Outputs**
+  - `IsSuspicious` flag
+  - `SuspiciousReason` explanation
+  - Export results to:
+    - CSV (case documentation, Excel review)
+    - JSON (automation/SIEM ingestion)
+
+---
+
+### 📦 Use Cases (SOC / IR Focus)
+- Triage suspicious login or behavior alerts  
+- Validate potential malware execution paths  
+- Investigate PowerShell misuse / encoded commands  
+- Rapid pre-isolation host review  
+- Forensics-style host state capture  
+- Home SOC lab simulations and training  
+
+---
+
+### 🚀 Example Usage
+
+**Basic Run:**
+```powershell
+.\Get-SuspiciousProcessSnapshot.ps1 -IncludeNetConnections -ShowOnlySuspicious `
+    -OutputCsv "C:\Logs\ProcessSnapshot.csv"
+
 # 🛡️ Featured Project: EventLog_Triage1  
 **Windows Security Event Log Triage Tool (PowerShell)**  
 📂 Repo: https://github.com/DigitalBulwark-z8586/EventLog_Triage1
