@@ -9,9 +9,11 @@ This portfolio contains hands-on projects designed to demonstrate the technical 
 
 ## 🛡️ Suspicious Process Snapshot (PowerShell)
 **Windows Endpoint Triage Tool | SOC & Incident Response | PowerShell Automation**
-Repo: https://github.com/DigitalBulwark-z8586/Suspicious_Process
+
 
 This project is a PowerShell-based triage utility designed to provide quick situational awareness during SOC investigations and Incident Response. The script performs a real-time snapshot of running processes, parent-child relationships, command-line arguments, and optional network connections — all essential data points for quickly validating suspicious activity on a Windows host.
+
+Repo: https://github.com/DigitalBulwark-z8586/Suspicious_Process
 
 ---
 
