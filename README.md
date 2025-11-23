@@ -58,6 +58,67 @@ A reusable PowerShell module designed to pull, parse, and enrich Windows Securit
 ### 🔗 Repository  
 https://github.com/DigitalBulwark-z8586/EventLog_Triage1
 
+📧 Phishing Email Analyzer (Python)
+Project Type: SOC Triage Tool • Python Automation • Email Forensics
+Repository: https://github.com/DigitalBulwark-z8586/Email_Analyzer/blob/main/README.md
+🔎 Overview
+
+The Phishing Email Analyzer is a Python-based SOC tool designed to quickly triage suspicious emails by parsing .eml files and extracting forensic data. It automates the first-level analysis typically performed by Tier 1 SOC Analysts, including sender verification, SPF/DKIM/DMARC evaluation, and URL risk assessment.
+
+This project demonstrates applied cybersecurity skills, Python scripting, and practical email forensics — all essential for SOC, ISSO, and Security Engineering roles.
+
+🛠️ What This Tool Does
+
+✔ Extracts and analyzes key email headers
+✔ Evaluates sender authenticity (impersonation checks)
+✔ Parses SPF, DKIM, and DMARC results
+✔ Extracts URLs from the email body
+✔ Flags suspicious domains, TLDs, and raw IP URLs
+✔ Handles Windows console Unicode issues safely
+
+🧠 Skills Demonstrated
+
+Python automation & parsing
+Email header forensics
+SPF, DKIM, DMARC understanding
+Malware/phishing URL triage
+SOC Tier 1 investigation workflow
+Safe handling of user data & PII redaction
+Blue team analysis logic
+
+🧪 Use Case
+This tool replicates the real-world workflow of a Tier 1 Analyst validating whether an email should be escalated or closed.
+
+Example SOC scenario:
+A user reports a suspicious email → you download the .eml file → run it through this analyzer → gather sender and URL insights → decide whether to escalate to IR or block at the mail gateway.
+
+📂 Repository Contents
+
+email_analyzer.py – Main analyzer script
+README.md – Full documentation and usage
+Example .eml files (optional)
+Safe-printing utility for Windows environments
+
+📈 Future Enhancements
+
+JSON/CSV export for SIEM ingestion
+Domain age lookup (WHOIS)
+VirusTotal / AbuseIPDB integration
+GUI version for security analysts
+Email attachment scanning (future module)
+
+🧩 Project Impact
+
+This project strengthens your cybersecurity portfolio by demonstrating:
+
+Practical SOC automation
+Real forensics concepts
+Ability to build security tooling
+Understanding of email authentication
+Analytical problem-solving
+
+It is a perfect highlight for roles including SOC Analyst, Cybersecurity Analyst, ISSO, and Detection Engineering positions.
+
 ---
 
 ## 3️⃣ Home SOC Lab – Hybrid AD + SIEM Architecture  
