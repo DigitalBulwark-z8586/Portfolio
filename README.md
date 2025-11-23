@@ -6,12 +6,13 @@ Welcome to my portfolio showcasing hands-on cybersecurity projects built to stre
 ---
 
 ## 📋 Table of Contents  
-1. [Suspicious Process Snapshot (PowerShell)](#1-suspicious-process-snapshot-powershell)  
-2. [Event Log Triage Tool (PowerShell)](#2-event-log-triage-tool-powershell)  
-3. [Home SOC Lab – Hybrid AD + SIEM Architecture](#3-home-soc-lab--hybrid-ad--siem-architecture)  
-4. [Network Traffic Analyzer – Python](#4-network-traffic-analyzer--python)  
-5. [Professional Background & Skills](#5-professional-background--skills)  
-6. [Contact & LinkedIn](#6-contact--linkedin)
+1. [Suspicious Process Snapshot (PowerShell)](#1-(https://github.com/DigitalBulwark-z8586/Suspicious_Process))  
+2. [Event Log Triage Tool (PowerShell)](#2-event-log-triage-tool-powershell)
+3. [Phishing Email Analyzer (Python)]  (https://github.com/DigitalBulwark-z8586/Email_Analyzer/blob/main/README.md)
+4. [Home SOC Lab – Hybrid AD + SIEM Architecture](#3-home-soc-lab--hybrid-ad--siem-architecture)  
+5. [Network Traffic Analyzer – Python](#4-network-traffic-analyzer--python)  
+6. [Professional Background & Skills](#5-professional-background--skills)  
+7. [Contact & LinkedIn](#6-contact--linkedin)
 
 ---
 
