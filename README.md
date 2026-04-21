@@ -1,193 +1,218 @@
-Zachary Hanselman – Portfolio
+# 🛡️ Zachary Hanselman – Cybersecurity Portfolio
 
-Cybersecurity | SOC Analyst | Blue Team Automation | Incident Response
+Cybersecurity | SOC Analyst | Blue Team Automation | Incident Response  
 
-Welcome to my portfolio showcasing hands-on cybersecurity projects built to strengthen SOC analysis, threat detection, and endpoint triage capabilities. This collection demonstrates practical PowerShell/Python scripting, SIEM integration, hybrid infrastructure design, and blue-team automation.
+Welcome to my portfolio showcasing hands-on cybersecurity projects built to strengthen **SOC analysis, threat detection, and endpoint triage capabilities**.  
 
-📋 Table of Contents
-#	Project Name & Repository URL
-1	Suspicious Process Snapshot (PowerShell)	https://github.com/DigitalBulwark-z8586/Suspicious_Process
+I currently work as a **Cyber Security Engineer / ISSO in DoD environments**, and this portfolio reflects practical experience in **SIEM engineering, detection development, automation, and hybrid infrastructure security**.
 
-2	Event Log Triage Tool (PowerShell)	https://github.com/DigitalBulwark-z8586/EventLog_Triage1
+---
 
-3	Phishing Email Analyzer (Python)	https://github.com/DigitalBulwark-z8586/Email_Analyzer
+## 🔐 Core Focus Areas
 
-4	Home SOC Lab – Hybrid AD + SIEM Architecture	Under Construction
-5	Network Traffic Analyzer – Python	Under Construction
-6	Professional Background & Skills	See Section Below
-7	Contact & LinkedIn	See Section Below
+- Security Operations (SOC)
+- SIEM Engineering (Splunk)
+- Threat Detection & Log Analysis
+- Incident Response & Investigation
+- Endpoint & Process Analysis
+- Identity & Access Management (Active Directory)
+- Cloud Security (AWS – In Progress)
+- Detection Engineering (MITRE ATT&CK aligned)
 
-1️⃣ Suspicious Process Snapshot (PowerShell)
+---
 
-Windows Endpoint Triage Tool | SOC & IR | Blue Team Automation
+## 📋 Table of Contents
 
-A PowerShell-based process triage script designed to support Tier 1 SOC analysts during active investigations. The tool captures real-time process activity, parent-child relationships, command-line usage, and optional network connections. Built-in heuristics help identify suspicious behavior such as encoded PowerShell, execution from Temp/Downloads, or shell processes making outbound connections.
+1. Suspicious Process Snapshot (PowerShell)  
+2. Event Log Triage Tool (PowerShell)  
+3. Phishing Email Analyzer (Python)  
+4. Home SOC Lab – Hybrid AD + SIEM Architecture  
+5. Network Traffic Analyzer – Python  
+6. Professional Background & Skills  
+7. Contact & LinkedIn  
 
-🔧 Key Features
+---
 
-Process enumeration: Name, PID, ParentPID, Path, CmdLine
+## 1️⃣ Suspicious Process Snapshot (PowerShell)
 
-Optional network mapping per process
+**Windows Endpoint Triage Tool | SOC & IR | Blue Team Automation**
 
-Flags suspicious behavior
+A PowerShell-based process triage script designed to support Tier 1 SOC analysts during active investigations.
 
-CSV/JSON export for IR case documentation
+### 🔧 Key Features
 
-Useful for malware triage and endpoint investigations
+- Process enumeration: Name, PID, ParentPID, Path, CmdLine  
+- Optional network mapping per process  
+- Flags suspicious behavior (Temp execution, encoded PowerShell, etc.)  
+- CSV/JSON export for IR documentation  
+- Useful for malware triage and endpoint investigations  
 
-🔗 Repository
+🔗 Repository:  
+https://github.com/DigitalBulwark-z8586/Suspicious_Process  
 
-https://github.com/DigitalBulwark-z8586/Suspicious_Process
+---
 
-2️⃣ Event Log Triage Tool (PowerShell)
+## 2️⃣ Event Log Triage Tool (PowerShell)
 
-Windows Security Log Analysis | Incident Response | Automation
+**Windows Security Log Analysis | Incident Response | Automation**
 
-A reusable PowerShell module designed to pull, parse, and enrich Windows Security Event Logs for SOC and Incident Response. Helps analysts quickly extract key details from authentication events, account changes, and security logs critical during an investigation.
+A reusable PowerShell module designed to pull, parse, and enrich Windows Security Event Logs for SOC workflows.
 
-🔍 What This Script Does
+### 🔍 What This Script Does
 
-Parses key Windows Security log events (4624, 4625, 4648, and more)
+- Parses key Windows Security log events (4624, 4625, 4648, etc.)  
+- Extracts:
+  - Logon type  
+  - Logon process  
+  - Source IP / workstation  
+  - Account/user details  
+- Converts logs into analyst-friendly CSV/JSON  
+- Supports brute-force detection & authentication analysis  
 
-Extracts:
+🔗 Repository:  
+https://github.com/DigitalBulwark-z8586/EventLog_Triage1  
 
-Logon type
+---
 
-Logon process
+## 3️⃣ Phishing Email Analyzer (Python)
 
-Network source info (IP, Workstation Name)
+**SOC Triage Tool | Email Forensics | Python Automation**
 
-Account and user details
+🔗 Repository:  
+https://github.com/DigitalBulwark-z8586/Email_Analyzer  
 
-Converts raw event logs into analyst-friendly CSV/JSON outputs
+### 🔎 Overview
 
-Includes reusable helper functions and consistent PowerShell structure
+A Python-based SOC tool that parses `.eml` files and extracts forensic data to support phishing investigations.
 
-Supports rapid triage, brute-force detection, and authentication analysis
+### 🛠️ Features
 
-🔗 Repository
+- Extracts and analyzes email headers  
+- Evaluates SPF, DKIM, and DMARC  
+- Identifies suspicious domains and URLs  
+- Flags risky indicators (IP-based URLs, unusual TLDs)  
 
-https://github.com/DigitalBulwark-z8586/EventLog_Triage1
+### 🧠 Skills Demonstrated
 
-3️⃣ Phishing Email Analyzer (Python)
+- Python automation  
+- Email header forensics  
+- Phishing detection workflows  
+- SOC Tier 1 triage automation  
 
-SOC Triage Tool | Python Automation | Email Forensics
+### 📈 Planned Enhancements
 
-🔗 Repository
+- JSON/CSV export for SIEM ingestion  
+- WHOIS domain lookup  
+- VirusTotal integration  
+- GUI interface  
 
-https://github.com/DigitalBulwark-z8586/Email_Analyzer
+---
 
-🔎 Overview
+## 4️⃣ Home SOC Lab – Hybrid AD + Splunk SIEM Architecture
 
-The Phishing Email Analyzer is a Python-based SOC tool designed to quickly triage suspicious emails by parsing .eml files and extracting forensic data. It automates the first-level analysis typically performed by Tier 1 SOC Analysts, including sender verification, SPF/DKIM/DMARC evaluation, and URL risk assessment.
+**Hybrid Infrastructure • Splunk SIEM • AWS EC2 • Detection Engineering**
 
-🛠️ What This Tool Does
+🔗 Repository:  
+*Under Construction*
 
-Extracts and analyzes key email headers
+### 🧩 Lab Overview
 
-Evaluates sender authenticity
+A full-scale SOC simulation environment replicating enterprise detection and response workflows.
 
-Parses SPF, DKIM, and DMARC results
+### 🏗️ Architecture
 
-Extracts URLs from the email body
+- Splunk Enterprise SIEM (AWS EC2)  
+- Linux & Windows endpoints with log forwarding  
+- Hybrid Active Directory (on-prem + cloud planned)  
+- Sysmon, Winlogbeat, Splunk Universal Forwarders  
+- Secure ingestion pipelines (port 9997)  
 
-Flags suspicious domains, TLDs, and raw IP URLs
+### 📊 Key Capabilities
 
-Handles Windows console Unicode issues safely
+- SIEM deployment & log ingestion  
+- Log normalization (hostnames, sourcetypes)  
+- Detection engineering & dashboard creation  
+- Data source health monitoring  
+- Network troubleshooting (Security Groups, ingestion issues)  
 
-🧠 Skills Demonstrated
+### 🎯 Goals
 
-Python automation & parsing
+- Simulate real SOC analyst workflows  
+- Build detection rules mapped to MITRE ATT&CK  
+- Perform attack simulations (brute force, privilege escalation)  
+- Integrate AWS IAM & GuardDuty  
 
-Email header forensics
+---
 
-SPF, DKIM, DMARC trust-model understanding
+## 5️⃣ Network Traffic Analyzer – Python
 
-Phishing detection logic
+**PCAP Analysis | DNS/ICMP Logging | SIEM Integration**
 
-SOC Tier 1 workflow automation
+🔗 Repository:  
+*Under Construction*
 
-Safe handling of user data
+### 🔧 Features
 
-🧪 Use Case
+- DNS & ICMP traffic logging  
+- Planned GeoIP enrichment  
+- CSV/JSON export for SIEM ingestion  
+- Future syslog forwarding capability  
 
-A user reports a suspicious email → You download the .eml file → Run it through the analyzer → Review sender and URL findings → Escalate or close based on risk.
+### 🎯 Purpose
 
-📈 Future Enhancements
+Supports network-level visibility and detection use cases within the Home SOC Lab.
 
-JSON/CSV export for SIEM ingestion
+---
 
-WHOIS domain age lookup
+## 6️⃣ Professional Background & Skills
 
-Integration with VirusTotal / AbuseIPDB
+### 🎓 Certifications
 
-GUI interface
+- CompTIA Security+  
+- CompTIA CySA+  
+- Studying: Microsoft AZ-500  
 
-4️⃣ Home SOC Lab – Hybrid AD + SIEM Architecture
+### 🧰 Technical Skills
 
-Hybrid Infra • Splunk SIEM • AWS EC2 • Windows Server 2022
+- **SIEM & Monitoring:** Splunk, Log Analysis, Detection Engineering  
+- **Scripting:** PowerShell, Python  
+- **Security Operations:** Incident Response, Threat Detection, Triage  
+- **Systems:** Windows Server, Linux (Ubuntu)  
+- **Infrastructure:** AWS EC2, Hybrid AD (In Progress)  
+- **Frameworks:** NIST RMF, MITRE ATT&CK  
 
-Designed a full SOC home lab combining on-premises Active Directory with a cloud-based domain controller, tied into Splunk Enterprise for security log ingestion. This lab simulates enterprise SOC workflows and detection engineering practices.
+---
 
-🧩 Lab Components
+## 🧠 What This Portfolio Demonstrates
 
-Windows Server 2022 Domain Controller (on-prem)
+- Ability to **build and operate a SOC environment from scratch**  
+- Hands-on experience with **SIEM engineering and log analysis**  
+- Strong understanding of **incident response workflows**  
+- Experience in **endpoint and network-level threat detection**  
+- Practical application of **enterprise security frameworks**  
 
-AWS EC2 cloud-based DC (Hybrid AD)
+---
 
-Splunk Enterprise SIEM on AWS
+## 🎯 Career Objective
 
-Sysmon + Winlogbeat + Universal Forwarders
+Seeking opportunities in:
 
-DNS/ICMP monitoring
+- Tier 1 / Tier 2 SOC Analyst  
+- Cybersecurity Analyst (Security Operations)  
+- Detection Engineering  
+- Cloud Security Engineering  
+- IAM & Identity Security  
 
-Custom detection rules mapped to MITRE ATT&CK
+---
 
-🎓 Goals
+## 7️⃣ Contact & LinkedIn
 
-Build a realistic SOC Analyst environment
+📧 Email: bulwarkdigital47@gmail.com  
 
-Practice detection engineering
+🔗 LinkedIn:  
+https://www.linkedin.com/in/digitalbulwark-z  
 
-Deploy and test blue-team tools in a controlled environment
+🔗 GitHub:  
+https://github.com/DigitalBulwark-z8586  
 
-🔗 Repository
-
-Under Construction
-
-5️⃣ Network Traffic Analyzer – Python
-
-PCAP Parsing | DNS/ICMP Logging | GeoIP Lookup | SIEM Integration
-
-Python-based network traffic monitoring tool created to support the Home SOC Lab. Captures live network data and exports logs to JSON/CSV for ingestion into Splunk or other SIEM platforms.
-
-🔧 Features
-
-Live DNS & ICMP flow logging
-GeoIP lookup for destination IPs
-CSV/JSON export
-Planned syslog forwarding
-
-🔗 Repository
-
-Under Construction
-
-6️⃣ Professional Background & Skills
-👨‍💻 Experience
-Contact me below for experience
-
-🎓 Certifications
-
-CompTIA Security+
-CompTIA CySA+
-Studying: Microsoft AZ-500
-
-🧰 Technical Skills
-
-PowerShell • Python • Splunk • SIEM Engineering • Windows Internals • Network Analysis • Hybrid AD • Detection Engineering • Incident Response
-
-7️⃣ Contact & LinkedIn
-
-📧 Email: bulwarkdigital47@gmail.com
-
-🔗 LinkedIn: https://www.linkedin.com/in/digitalbulwark-z
+---
