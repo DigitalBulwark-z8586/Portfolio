@@ -4,7 +4,7 @@ Cybersecurity | SOC Analyst | Blue Team Automation | Incident Response
 
 Welcome to my portfolio showcasing hands-on cybersecurity projects built to strengthen **SOC analysis, threat detection, and endpoint triage capabilities**.  
 
-I currently work as a **Cyber Security Engineer / ISSO in DoD environments**, and this portfolio reflects practical experience in **SIEM engineering, detection development, automation, and hybrid infrastructure security**.
+I currently work as a **Cyber Security Analyst in DoD environments**, and this portfolio reflects practical experience in **SIEM engineering, detection development, automation, and hybrid infrastructure security**.
 
 ---
 
